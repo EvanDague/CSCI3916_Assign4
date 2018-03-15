@@ -1,0 +1,705 @@
+{
+	"info": {
+		"name": "CSCI3916",
+		"_postman_id": "211b1ff6-bb8a-703e-04b4-490f693d414e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Assign3",
+			"description": "",
+			"item": [
+				{
+					"name": "Assign3_UserSignUp",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b071eb2e-67a7-4a8e-a1cd-5611d47d7b0d",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Evan\",\n\"username\": \"Cultel\",\n\"password\": \"password1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"signup"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Assign3_UserSignIn",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "28738fe5-0a86-4880-a344-39e8c898b81e",
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"pm.environment.set(\"jwt-token\", jsonData.token);",
+									"",
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Evan\",\n\"username\": \"Cultel\",\n\"password\": \"password1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"signin"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Assign3_FindUsers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c53b9174-d81b-46b9-9713-66e8be0f031f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Evan\",\n\"username\": \"Cultel\",\n\"password\": \"password1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Assign3_FindUserId",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c4c8895c-8e6e-4fda-9278-9dace83feebb",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Evan\",\n\"username\": \"Cultel\",\n\"password\": \"password1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/users/5aa8a4d3f184c900ec26a003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								"5aa8a4d3f184c900ec26a003"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Assign3_getMovies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c4c8895c-8e6e-4fda-9278-9dace83feebb",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Evan\",\n\"username\": \"Cultel\",\n\"password\": \"password1\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Assign3_postMovies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c4c8895c-8e6e-4fda-9278-9dace83feebb",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"title\": \"Jack and the Giant beanstalk\",\n\"year\": \"2001\",\n\"genre\": \"Horror\",\n\"actors\": [\n\t{\"actor_name\": \"John\", \"character_name\": \"Johnny Depp\"},\n\t{\"actor_name\": \"Steve\", \"character_name\": \"Donald Trump\"},\n\t{\"actor_name\": \"William\", \"character_name\": \"Random Hobo\"}\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Assign3_putMovies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c4c8895c-8e6e-4fda-9278-9dace83feebb",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"_id\": \"5aa9ab0f28dbc32bb83451e8\",\n\"title\": \"Avatar\",\n\"year\": \"2009\",\n\"genre\": \"Fantasy\",\n\"actors\": [\n\t{\"actor_name\": \"John\", \"character_name\": \"Johnny Depp\"},\n\t{\"actor_name\": \"Steve\", \"character_name\": \"Donald Trump\"},\n\t{\"actor_name\": \"William\", \"character_name\": \"Random Hobo\"}\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Assign3_delMovies",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c4c8895c-8e6e-4fda-9278-9dace83feebb",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"_id\": \"5aa9e8e727e3900d208f8eaa\",\n\"title\": \"Avatar\",\n\"year\": \"2009\",\n\"genre\": \"Sci-Fi\",\n\"actors\": [\n\t{\"actor_name\": \"John\", \"character_name\": \"Johnny Depp\"},\n\t{\"actor_name\": \"Steve\", \"character_name\": \"Donald Trump\"},\n\t{\"actor_name\": \"William\", \"character_name\": \"Random Hobo\"}\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movies"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assign1",
+			"description": "",
+			"item": [
+				{
+					"name": "Assign1_TuringBooks",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "62c31e34-f0bc-41c8-8bc4-7924859bef1a",
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"var bookID = jsonData.items[0].id;",
+									"postman.setEnvironmentVariable(\"id\", bookID);",
+									"",
+									"var title = jsonData.items[0].volumeInfo.title;",
+									"var patt = /turing/i;",
+									"var res = patt.test(title);",
+									"",
+									"tests[\"Book title includes turing\"] = (res === true);",
+									"tests[\"Status code 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://www.googleapis.com/books/v1/volumes?q={{book_title}}",
+							"protocol": "https",
+							"host": [
+								"www",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"books",
+								"v1",
+								"volumes"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "{{book_title}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Assign1_TuringID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "dd1782ea-e960-4c10-8f5c-5a23b841e579",
+								"type": "text/javascript",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"",
+									"var bookID = jsonData.items[0].id;",
+									"",
+									"tests[\"Book ID is correct\"] = (bookID === postman.getEnvironmentVariable(\"id\"));",
+									"tests[\"Status code 200\"] = responseCode.code === 200;"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://www.googleapis.com/books/v1/volumes?q={{id}}",
+							"protocol": "https",
+							"host": [
+								"www",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"books",
+								"v1",
+								"volumes"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "{{id}}",
+									"equals": true
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assign2",
+			"description": "",
+			"item": [
+				{
+					"name": "Assign2_ServerEcho",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "00882477-8da4-4a48-8809-f2a5c9ad6651",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Id\":1234,\n\t\"test\":\"echo\"\n}"
+						},
+						"url": {
+							"raw": "https://csci3916-assign2.herokuapp.com/post",
+							"protocol": "https",
+							"host": [
+								"csci3916-assign2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"post"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Assign2_ServerEcho",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "574ef19f-4119-437b-ae49-202b6003d79f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://csci3916-assign2.herokuapp.com/get",
+							"protocol": "https",
+							"host": [
+								"csci3916-assign2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"get"
+							]
+						},
+						"description": null
+					},
+					"response": []
+				},
+				{
+					"name": "Assign2_ServerEcho",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "97b714be-c95b-49ff-b177-5dc0c5162eed",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://csci3916-assign2.herokuapp.com/put",
+							"protocol": "https",
+							"host": [
+								"csci3916-assign2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"put"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Assign2_ServerEcho",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "0e2166b9-a818-4f04-a958-9c199832f622",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {",
+									"    pm.response.to.have.status(401);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://csci3916-assign2.herokuapp.com/delete",
+							"protocol": "https",
+							"host": [
+								"csci3916-assign2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"delete"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Assign2_ServerEcho",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3a1abde9-c327-4918-a660-e6ccea4b089c",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "cu",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "testuser",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://csci3916-assign2.herokuapp.com/delete",
+							"protocol": "https",
+							"host": [
+								"csci3916-assign2",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"delete"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
