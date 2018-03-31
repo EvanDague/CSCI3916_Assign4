@@ -189,4 +189,4 @@ router.route('/reviews')
     })
 
 app.use('/', router);
-app.listen(8080);
+app.listen(process.env.port || 8080);
