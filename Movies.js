@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/Assign3_DB');
+mongoose.connect(process.env.DB);
 
 var MovieSchema = new Schema({
     title: String,

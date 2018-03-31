@@ -4,6 +4,7 @@ var passport = require('passport');
 var authJwtController = require('./auth_jwt');
 var User = require('./Users');
 var Movie = require('./Movies');
+var Review = require('./Reviews');
 var jwt = require('jsonwebtoken');
 
 var app = express();
@@ -140,6 +141,50 @@ router.route('/movies')
             if (err) throw err;
 
             res.json({message: 'Movie deleted'})
+        });
+    })
+
+router.route('/movies/:movieID')
+    .get(authJwtController.isAuthenticated, function (req, res) {
+        var id = req.params.movieID;
+        var query = {};
+        query["movie"] = "Avatar";
+        Movie.findById(id, function(err, movie) {
+            if (err) res.send(err);
+
+            if(req.query.reviews) {
+                Review.find(query, function (err, reviews) {
+                    if (err) res.send(err);
+                    // add reviews
+                    res.json({movie: movie, reviews: reviews});
+                });
+            }
+            else{
+                res.json(movie);
+            }
+        });
+    });
+router.route('/reviews')
+    .get(function (req, res) {
+        Review.find(function (err, reviews) {
+            if (err) res.send(err);
+            // return the users
+            res.json(reviews);
+        });
+    })
+router.route('/reviews')
+    .post(authJwtController.isAuthenticated, function (req, res) {
+        var newReview = new Review();
+        newReview.name = req.body.name;
+        newReview.movie = req.body.title;
+        newReview.review = req.body.review;
+        newReview.rating = req.body.rating;
+        newReview.save(function(err) {
+            if (err) {
+                return res.send(err);
+            }
+
+            res.json({message: 'Review created!'});
         });
     })
 
