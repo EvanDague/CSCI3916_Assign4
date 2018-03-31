@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-    </list>
+    <list default="true" id="d9ee19f9-cc16-478b-9ef6-92d5d45bbb3c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -19,8 +17,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1044">
-              <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+            <state relative-caret-position="-2276">
+              <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -91,6 +89,8 @@
       <find>passport</find>
       <find>find</find>
       <find>Console</find>
+      <find>err</find>
+      <find>function</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -217,12 +217,12 @@
       <workItem from="1520308174902" duration="129000" />
       <workItem from="1521000189422" duration="24283000" />
       <workItem from="1522186873088" duration="1875000" />
-      <workItem from="1522267929563" duration="29590000" />
+      <workItem from="1522267929563" duration="29823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74604000" />
+    <option name="totallyTimeSpent" value="74837000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -558,8 +558,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+        <state relative-caret-position="-2276">
+          <caret line="42" column="26" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="26" />
           <folding />
         </state>
       </provider>
