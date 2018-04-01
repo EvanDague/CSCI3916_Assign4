@@ -1,8 +1,7 @@
 {
 	"info": {
-		"name": "CSCI3916",
 		"_postman_id": "211b1ff6-bb8a-703e-04b4-490f693d414e",
-		"description": "",
+		"name": "CSCI3916",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -39,17 +38,17 @@
 							"raw": "{\n\"name\": \"Evan\",\n\"username\": \"Cultel\",\n\"password\": \"password1\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/signup",
-							"protocol": "http",
+							"raw": "https://csci3916-assign4.herokuapp.com/signup",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"signup"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -86,17 +85,17 @@
 							"raw": "{\n\"name\": \"Evan\",\n\"username\": \"Cultel\",\n\"password\": \"password1\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/signin",
-							"protocol": "http",
+							"raw": "https://csci3916-assign4.herokuapp.com/signin",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"signin"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -133,17 +132,17 @@
 							"raw": "{\n\"name\": \"Evan\",\n\"username\": \"Cultel\",\n\"password\": \"password1\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/users",
-							"protocol": "http",
+							"raw": "https://csci3916-assign4.herokuapp.com/users",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"users"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -180,18 +179,18 @@
 							"raw": "{\n\"name\": \"Evan\",\n\"username\": \"Cultel\",\n\"password\": \"password1\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/users/5aa8a4d3f184c900ec26a003",
-							"protocol": "http",
+							"raw": "https://csci3916-assign4.herokuapp.com/users/{{userID}}",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"users",
-								"5aa8a4d3f184c900ec26a003"
+								"{{userID}}"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -228,17 +227,17 @@
 							"raw": "{\n\"name\": \"Evan\",\n\"username\": \"Cultel\",\n\"password\": \"password1\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/movies",
-							"protocol": "http",
+							"raw": "https://csci3916-assign4.herokuapp.com/movies",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"movies"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -272,20 +271,20 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"title\": \"Jack and the Giant beanstalk\",\n\"year\": \"2001\",\n\"genre\": \"Horror\",\n\"actors\": [\n\t{\"actor_name\": \"John\", \"character_name\": \"Johnny Depp\"},\n\t{\"actor_name\": \"Steve\", \"character_name\": \"Donald Trump\"},\n\t{\"actor_name\": \"William\", \"character_name\": \"Random Hobo\"}\n\t]\n}"
+							"raw": "{\n\"title\": \"Frozen\",\n\"year\": \"2001\",\n\"genre\": \"Horror\",\n\"actors\": [\n\t{\"actor_name\": \"John\", \"character_name\": \"Johnny Depp\"},\n\t{\"actor_name\": \"Steve\", \"character_name\": \"Donald Trump\"},\n\t{\"actor_name\": \"William\", \"character_name\": \"Random Hobo\"}\n\t]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/movies",
-							"protocol": "http",
+							"raw": "https://csci3916-assign4.herokuapp.com/movies",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"movies"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -322,17 +321,17 @@
 							"raw": "{\n\"_id\": \"5aa9ab0f28dbc32bb83451e8\",\n\"title\": \"Avatar\",\n\"year\": \"2009\",\n\"genre\": \"Fantasy\",\n\"actors\": [\n\t{\"actor_name\": \"John\", \"character_name\": \"Johnny Depp\"},\n\t{\"actor_name\": \"Steve\", \"character_name\": \"Donald Trump\"},\n\t{\"actor_name\": \"William\", \"character_name\": \"Random Hobo\"}\n\t]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/movies",
-							"protocol": "http",
+							"raw": "https://csci3916-assign4.herokuapp.com/movies",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"movies"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -366,20 +365,20 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\"_id\": \"5aa9e8e727e3900d208f8eaa\",\n\"title\": \"Avatar\",\n\"year\": \"2009\",\n\"genre\": \"Sci-Fi\",\n\"actors\": [\n\t{\"actor_name\": \"John\", \"character_name\": \"Johnny Depp\"},\n\t{\"actor_name\": \"Steve\", \"character_name\": \"Donald Trump\"},\n\t{\"actor_name\": \"William\", \"character_name\": \"Random Hobo\"}\n\t]\n}"
+							"raw": "{\n\"_id\": \"5abede2c73e23928b45be736\",\n\"title\": \"Avatar\",\n\"year\": \"2009\",\n\"genre\": \"Sci-Fi\",\n\"actors\": [\n\t{\"actor_name\": \"John\", \"character_name\": \"Johnny Depp\"},\n\t{\"actor_name\": \"Steve\", \"character_name\": \"Donald Trump\"},\n\t{\"actor_name\": \"William\", \"character_name\": \"Random Hobo\"}\n\t]\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/movies",
-							"protocol": "http",
+							"raw": "https://csci3916-assign4.herokuapp.com/movies",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
 							],
-							"port": "8080",
 							"path": [
 								"movies"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -433,12 +432,10 @@
 							"query": [
 								{
 									"key": "q",
-									"value": "{{book_title}}",
-									"equals": true
+									"value": "{{book_title}}"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -481,12 +478,10 @@
 							"query": [
 								{
 									"key": "q",
-									"value": "{{id}}",
-									"equals": true
+									"value": "{{id}}"
 								}
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				}
@@ -535,8 +530,7 @@
 							"path": [
 								"post"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -571,8 +565,7 @@
 							"path": [
 								"get"
 							]
-						},
-						"description": null
+						}
 					},
 					"response": []
 				},
@@ -607,8 +600,7 @@
 							"path": [
 								"put"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -643,8 +635,7 @@
 							"path": [
 								"delete"
 							]
-						},
-						"description": ""
+						}
 					},
 					"response": []
 				},
@@ -694,8 +685,197 @@
 							"path": [
 								"delete"
 							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assign4",
+			"description": "",
+			"item": [
+				{
+					"name": "Assign4_getReviews",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6371b41a-8002-4619-9803-37138d7a4e6e",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "https://csci3916-assign4.herokuapp.com/reviews",
+							"protocol": "https",
+							"host": [
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign4_postReview",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5527891d-d555-4a8d-99f9-852d3c068c1b",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Elsa\",\n\"title\": \"Frozen\",\n\"review\": \"Just let it go already.\",\n\"rating\": 4.5\n}"
 						},
-						"description": ""
+						"url": {
+							"raw": "https://csci3916-assign4.herokuapp.com/reviews",
+							"protocol": "https",
+							"host": [
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign4_getMovieReview",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1dc26de1-1bb2-4812-a203-eb541456cb1d",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Bobby\",\n\"title\": \"Avatar\",\n\"review\": \"Great movie! I loved the part where they all lived.\",\n\"rating\": 5\n}"
+						},
+						"url": {
+							"raw": "https://csci3916-assign4.herokuapp.com/movies/{{movieID}}?reviews=true",
+							"protocol": "https",
+							"host": [
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"{{movieID}}"
+							],
+							"query": [
+								{
+									"key": "reviews",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign4_getMovieNoReview",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "919b19e8-4fb9-4348-973f-3b38b320076b",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "{{jwt-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"name\": \"Bobby\",\n\"title\": \"Avatar\",\n\"review\": \"Great movie! I loved the part where they all lived.\",\n\"rating\": 5\n}"
+						},
+						"url": {
+							"raw": "https://csci3916-assign4.herokuapp.com/movies/{{movieID}}",
+							"protocol": "https",
+							"host": [
+								"csci3916-assign4",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"movies",
+								"{{movieID}}"
+							]
+						}
 					},
 					"response": []
 				}
